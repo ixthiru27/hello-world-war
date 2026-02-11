@@ -23,10 +23,7 @@ pipeline {
 
         stage('Deploy to Tomcat') {
             steps {
-               
-                deploy adapters: [tomcat9(credentialsId: 'tomcat-creds', path: '', url: 'http://3.110.156.189:9090')], 
-                       contextPath: 'myapp',
-                       war: 'target/*.war'
+               bat 'copy target\\*.war C:\\path\\to\\tomcat\\webapps'
             }
         }
     }
