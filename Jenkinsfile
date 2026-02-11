@@ -23,7 +23,7 @@ pipeline {
 
         stage('Deploy to Tomcat') {
             steps {
-              bat 'copy target\\*.war C:\\tomcat\\webapps'
+              bat 'copy target\\*.war C:\Program Files\Apache Software Foundation\Tomcat 11.0\webapps
 
             }
         }
